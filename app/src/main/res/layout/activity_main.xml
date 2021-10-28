@@ -20,112 +20,148 @@
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip2"
+                style="@style/Chip.Blue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingStart="10dp"
                 android:paddingLeft="10dp"
-                app:chipIcon="@drawable/ic_center_focus_weak_chip" />
+                app:chipIcon="@drawable/ic_center_focus_weak_chip"
+                tools:text="@string/scan_chip" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip3"
+                style="@style/Chip.Blue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="@string/top_up_chip"
                 app:chipIcon="@drawable/ic_add_circle_outline_chip" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip4"
+                style="@style/Chip.Blue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="@string/send_chip"
                 app:chipIcon="@drawable/ic_open_in_new_chip" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip5"
+                style="@style/Chip.Blue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="@string/request_chip"
                 app:chipIcon="@drawable/ic_open_in_new_rotated_chip" />
 
         </LinearLayout>
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            style="@style/CardView.White"
+            android:layout_weight="1" >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#FFFFFF"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="75dp"
-                    android:layout_height="64dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_phone_android" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="49dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_phone_android" />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Button" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="93dp"
                     android:layout_weight="1"
-                    android:text="Buy Now" />
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        app:srcCompat="@drawable/ic_lightbulb" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        app:srcCompat="@drawable/ic_monetization_on" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        app:srcCompat="@drawable/ic_games" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/cardview_light_background"
+                        app:srcCompat="@drawable/ic_more_horiz" />
+
+                </LinearLayout>
             </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="66dp"
-                android:background="#FFFFFF"
-                android:orientation="horizontal"
-                android:visibility="visible"
-                tools:visibility="visible">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/imageButton"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#FFFFFF"
-                    android:visibility="visible"
-                    app:srcCompat="@drawable/ic_lightbulb"
-                    tools:visibility="visible" />
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/imageButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#FFFFFF"
-                    android:visibility="visible"
-                    app:srcCompat="@drawable/ic_monetization_on"
-                    tools:visibility="visible" />
+                    <CheckBox
+                        android:id="@+id/checkBox2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CheckBox" />
 
-                <ImageButton
-                    android:id="@+id/imageButton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#FFFFFF"
-                    android:visibility="visible"
-                    app:srcCompat="@drawable/ic_games"
-                    tools:visibility="visible" />
-
-                <ImageButton
-                    android:id="@+id/imageButton4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#FFFFFF"
-                    android:visibility="visible"
-                    app:srcCompat="@drawable/ic_more_horiz"
-                    tools:visibility="visible" />
+                    <EditText
+                        android:id="@+id/editTextNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number" />
+                </LinearLayout>
 
             </LinearLayout>
-        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 </ScrollView>
