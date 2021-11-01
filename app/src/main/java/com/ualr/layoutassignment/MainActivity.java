@@ -26,28 +26,34 @@ public class MainActivity extends AppCompatActivity {
     public void calculateTotal(View view) {
        //need binding to work to do this i think
         //check if checkbox checked and add to total
-        int totalCost = 0;
+        double totalCost = 0.0;
 
         //see if checkbox is checked, if it is then convert the value from the corresponding decimal box to float and add it
 
 
         if(binding.checkBox.isChecked()){
-            totalCost += Float.parseFloat(binding.editTextNumberDecimal.getText().toString());
+            totalCost += Double.parseDouble(binding.editTextNumberDecimal.getText().toString());
         }
 
         if(binding.checkBox2.isChecked()){
-            totalCost += Float.parseFloat(binding.editTextNumberDecimal2.getText().toString());
+            totalCost += Double.parseDouble(binding.editTextNumberDecimal2.getText().toString());
         }
 
         if(binding.checkBox3.isChecked()){
-            totalCost += Float.parseFloat(binding.editTextNumberDecimal3.getText().toString());
+            totalCost += Double.parseDouble(binding.editTextNumberDecimal3.getText().toString());
         }
 
         if(binding.checkBox4.isChecked()){
-            totalCost += Float.parseFloat(binding.editTextNumberDecimal4.getText().toString());
+            totalCost += Double.parseDouble(binding.editTextNumberDecimal4.getText().toString());
         }
 
+        if(binding.discountButton.isChecked()) {
+          totalCost = totalCost*0.75;
+        }
+        String totalCostString = String.valueOf(totalCost);
+
+        totalCostString= totalCostString.format("%.2f", totalCost);
         //update textView3 to show the final cost
-        binding.textView3.setText(totalCost);
+        binding.totalTextView.setText(totalCostString);
     }
 }
