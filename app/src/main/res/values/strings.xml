@@ -11,4 +11,8 @@
     <string name="calculate_total_btn">calculate total</string>
     <string name="_00_00">00.00</string>
     <string name="dollar_symbol">$</string>
+    <string name="electricString">Electricity</string>
+    <string name="cashoutString">Cash Out</string>
+    <string name="gameString">Games</string>
+    <string name="seeAllString">See All</string>
 </resources>
