@@ -23,30 +23,31 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
     }
 
-    public float calculateTotal(View view) {
+    public void calculateTotal(View view) {
        //need binding to work to do this i think
-        //check if checkbox chedked and add to total
+        //check if checkbox checked and add to total
         int totalCost = 0;
 
         //see if checkbox is checked, if it is then convert the value from the corresponding decimal box to float and add it
 
-        /*
-        if(checkBox.isChecked()){
-            totalCost += Float.parseFloat(editTextNumberDecimal.getText().toString());
+
+        if(binding.checkBox.isChecked()){
+            totalCost += Float.parseFloat(binding.editTextNumberDecimal.getText().toString());
         }
 
-        if(checkBox2.isChecked()){
-            totalCost += Float.parseFloat(editTextNumberDecimal2.getText().toString());
+        if(binding.checkBox2.isChecked()){
+            totalCost += Float.parseFloat(binding.editTextNumberDecimal2.getText().toString());
         }
 
-        if(checkBox3.isChecked()){
-            totalCost += Float.parseFloat(editTextNumberDecimal3.getText().toString());
+        if(binding.checkBox3.isChecked()){
+            totalCost += Float.parseFloat(binding.editTextNumberDecimal3.getText().toString());
         }
 
-        if(checkBox4.isChecked()){
-            totalCost += Float.parseFloat(editTextNumberDecimal4.getText().toString());
+        if(binding.checkBox4.isChecked()){
+            totalCost += Float.parseFloat(binding.editTextNumberDecimal4.getText().toString());
         }
-        */
-        return totalCost;
+
+        //update textView3 to show the final cost
+        binding.textView3.setText(totalCost);
     }
 }
