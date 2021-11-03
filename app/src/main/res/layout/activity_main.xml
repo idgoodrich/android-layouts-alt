@@ -3,6 +3,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text"
     style="@style/AppTheme"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -83,26 +84,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_editor_absoluteY="16dp" />
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/invoiceTextCard"
-                    style="@style/CardView.White"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:visibility="visible"
-                    app:layout_constraintBottom_toTopOf="@+id/invoiceCard"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/discountButton"
-                    tools:visibility="visible">
-
-                    <TextView
-                        android:id="@+id/textView5"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:text="@string/invoice" />
-                </androidx.cardview.widget.CardView>
-
                 <com.google.android.material.button.MaterialButtonToggleGroup
                     android:id="@+id/discountButton"
                     style="@style/Button.Blue.Group"
@@ -143,6 +124,23 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/invoiceCard" />
 
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginLeft="36dp"
+                    android:text="Total: $"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:drawableTint="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/totalTextView"
+                    app:layout_constraintEnd_toStartOf="@+id/totalTextView"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toEndOf="@+id/button2"
+                    app:layout_constraintTop_toTopOf="@+id/totalTextView"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:text="Total: $" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/pulsaCard"
                     style="@style/CardView.White"
@@ -166,13 +164,15 @@
 
                         <Button
                             android:id="@+id/button"
-                            style="@style/Button.Blue.Borderless"
+                            style="@style/Button.Outlined.White"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
                             android:layout_marginRight="8dp"
                             android:text="@string/buy_now"
-                            app:backgroundTint="#FFFFFF"
+                            android:textColor="#FFFFFF"
+                            app:backgroundTint="@color/blue_400"
+                            app:iconTint="@color/blue_400"
                             app:layout_constraintBottom_toBottomOf="@+id/textView2"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -311,23 +311,21 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/invoiceCard"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/invoiceTextCard
-">
+                    app:layout_constraintTop_toBottomOf="@+id/discountButton">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/InvoiceSection"
                         style="@style/CardView.White"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        app:layout_constraintTop_toBottomOf="@+id/invoiceCard">
+                        android:layout_height="match_parent">
 
                         <CheckBox
                             android:id="@+id/checkBox"
@@ -422,28 +420,17 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginLeft="32dp"
-                    android:text="Total: $"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    app:drawableTint="@android:color/black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/button2"
-                    app:layout_constraintTop_toBottomOf="@+id/invoiceCard"
-                    tools:text="Total: $" />
-
-                <TextView
                     android:id="@+id/totalTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0.00"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     app:drawableTint="@color/black"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                    app:layout_constraintBottom_toBottomOf="@+id/button2"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textView3"
+                    app:layout_constraintTop_toTopOf="@+id/button2"
+                    app:layout_constraintVertical_bias="0.482"
                     tools:text="0.00" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
