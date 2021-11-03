@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
         //see if checkbox is checked, if it is then convert the value from the corresponding decimal box to float and add it
 
-
         if(binding.checkBox.isChecked()){
             totalCost += Double.parseDouble(binding.editTextNumberDecimal.getText().toString());
         }
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             totalCost += Double.parseDouble(binding.editTextNumberDecimal4.getText().toString());
         }
 
-        if(binding.discountButton.isChecked()) {
+        if(binding.rightButton.isChecked()) {
           totalCost = totalCost*0.75;
         }
         String totalCostString = String.valueOf(totalCost);
